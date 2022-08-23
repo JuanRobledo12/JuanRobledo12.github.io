@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Juan Antonio Robledo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" 
+										/></span><span class="title">Juan Antonio Robledo Lara</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="personal.html">Personal Interests</a></li>
+							<li><a href="robotArm.html">3DOF Robotic Arm</a></li>
+							<li><a href="printers.html">3D Printing</a></li>
+							<li><a href="plcRobot.html">Cartesian Robot</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>3DOF Teleoperated Planar Robotic Arm</h1>
+							<span class="image main"><img src="images/roboticArm_img.png" alt="" /></span>
+							<p>I started working on this project in the course <b>MR3031 
+								Industrial Robotics</b> at Tecnologico de Monterrey. 
+								The development involved building the robot and programming 
+								the control software.</p>
+							<p>I designed my robot using the CAD software <b>SolidWorks</b> 
+								and manufactured it with a fused deposition modeling (FDM) 3D printer. Then I 
+								calculated the forward and inverse kinematics equations that 
+								described the robot's motion. In addition, I developed a control 
+								software in <b>Python</b> where the user can input the desired coordinates 
+								to move the robot's end-effector. Moreover, the user can set the 
+								trajectory to be linear or angular. </p>
+							<p>Although it was not a requirement, I implemented an <b>MQTT network</b> to teleoperate 
+								the robot. First, in the Python control software, 
+								I created an MQTT client to publish the angle values that the arm's 
+								servomotors had to take to reach certain coordinates with a specific trajectory. 
+								Then I chose an <b>ESP8266</b> to control the servomotors since it can be connected to 
+								WiFi and is compatible with the MQTT protocol. Therefore, I created a client in 
+								the servomotor's control software to subscribe to the topic where the angle values 
+								were being published. Finally, for the MQTT network to work, I used a <b>Raspberry Pi</b> 
+								and the Eclipse Mosquitto MQTT broker to handle the messages in my network.</p>
+							<p>The source code for this project is in my <a href="https://github.com/JuanRobledo12/karasu" target="_blank">GitHub repository, 
+								"Karasu."</a> If you are interested in more details about the project, 
+								please watch the following <a href="https://youtu.be/hmLtnLvdzH0" target="_blank">YouTube video.</a></p>
+							
+							
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<section>
+							<h2>Get in touch</h2>
+							<form method="post" action="https://formspree.io/f/mlevdgaq">
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send" class="primary" /></li>
+								</ul>
+							</form>
+						</section>
+						<section>
+							<h2>Follow</h2>
+							<ul class="icons">
+								<li><a href="https://github.com/JuanRobledo12" target="_blank" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="mailto:jroblar98@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+						</section>
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
